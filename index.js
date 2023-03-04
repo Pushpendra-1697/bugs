@@ -21,7 +21,7 @@ app.get('/', async (req, res) => {
 
 app.use('/', UserRouter);
 app.use(auth);
-app.use('/', dashboardRouter);
+// app.use('/', dashboardRouter);
 
 
 app.listen(PORT, async () => {
