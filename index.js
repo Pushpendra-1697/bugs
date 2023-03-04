@@ -18,6 +18,8 @@ app.get('/', async (req, res) => {
 });
 
 
+
+
 app.use('/', UserRouter);
 app.use(auth);
 
