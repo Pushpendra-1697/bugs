@@ -4,7 +4,6 @@ require('dotenv').config();
 const cors = require('cors');
 const { connection } = require('./Configs/Config');
 const { UserRouter } = require('./Routes/user.route');
-const { auth } = require('./Middleware/validate.middleware');
 const PORT = process.env.PORT || 3000;
 
 
@@ -21,7 +20,6 @@ app.get('/', async (req, res) => {
 
 
 app.use('/', UserRouter);
-app.use(auth);
 
 
 app.listen(PORT, async () => {
