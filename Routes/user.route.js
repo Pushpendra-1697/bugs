@@ -2,7 +2,7 @@ const { Router } = require('express');
 const UserRouter = Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const { UserModel } = require('../Models/User.model');
+const { UserModel } = require('../Models/user.model');
 
 UserRouter.post('/signup', async (req, res) => {
     const { email, password } = req.body;
