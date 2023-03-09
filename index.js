@@ -5,21 +5,18 @@ const cors = require('cors');
 const { connection } = require('./Configs/Config');
 const { UserRouter } = require('./Routes/user.route');
 const PORT = process.env.PORT || 3000;
-
-
+const { dashboardRouter } = require('./Routes/dashboard.route');
 
 app.use(cors());
 app.use(express.json());
 app.use(express.text());
 
 app.get('/', async (req, res) => {
-    res.send('Welcome in Mock-14')
+    res.send('Welcome in Bug Tracker App')
 });
 
-
-
-
 app.use('/', UserRouter);
+app.use('/dashboard', dashboardRouter);
 
 
 app.listen(PORT, async () => {
